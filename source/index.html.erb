@@ -27,10 +27,10 @@ title: Le Wagon - Middleman
     <% data.homes.each do |home| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/<%= home.city %>');">
-          <div class="card-category"><%= home.category %></div>
+          <div class="card-category"><%= home.owner %></div>
           <div class="card-description">
             <h2><%= home.country %></h2>
-            <p><%= home.description %> in <%= home.city.capitalize %></p>
+            <p><%= home.description %> in <%= home.city.capitalize %>, <%= home.category %></p>
           </div>
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{home.github_nickname}", class: "card-user" %>
           <a class="card-link" href="#" ></a>
