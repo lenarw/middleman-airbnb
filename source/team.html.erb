@@ -1,0 +1,11 @@
+<div id="team">
+  <ul class="list-inline text-center">
+    <% data.team.each do |user| %>
+      <li>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.github_nickname}", class: "img-circle medium-avatar" %>
+        <h2><%= user.name %></h2>
+        <p><a href="http://github.com/#{user.github_nickname}"><i class="fa fa-github"></i> <%= user.github_nickname %></a></p>
+      </li>
+    <% end %>
+  </ul>
+</div>
